@@ -176,7 +176,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@db87](https://github.com/db87/)
+* [@danielbrown2](https://github.com/danielbrown2/)
 * [@duncanmmacleod](https://github.com/duncanmmacleod/)
 * [@freise](https://github.com/freise/)
 
