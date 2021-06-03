@@ -19,7 +19,7 @@ source:
     - no-cython-runtime-requirement.patch
 
 build:
-  number: 0
+  number: 1
   skip: true   # [py<38]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -77,7 +77,7 @@ about:
   home: https://www.gwoptics.org/finesse
   dev_url: https://git.ligo.org/finesse/finesse3.git
   doc_url: https://finesse.docs.ligo.org/finesse3/
-  license: MIT
+  license: GPL-3.0-or-later
   license_file: LICENSES.md
   summary: A simulation tool for modelling laser interferometers
   description: |
