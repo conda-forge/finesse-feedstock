@@ -3,7 +3,7 @@ About finesse
 
 Home: https://www.gwoptics.org/finesse
 
-Package license: MIT
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/finesse-feedstock/blob/master/LICENSE.txt)
 
