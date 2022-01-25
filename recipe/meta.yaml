@@ -17,6 +17,8 @@ source:
     - test-tmp-files.patch
     # remove unnecessary cython runtime requirement (fixed upstream)
     - no-cython-runtime-requirement.patch
+    # declare MS_WIN64 for min64 compiler
+    - MS_WIN64.patch  # [win]
 
 build:
   number: 1
