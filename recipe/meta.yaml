@@ -17,6 +17,8 @@ source:
     - test-tmp-files.patch
     # remove unnecessary cython runtime requirement (fixed upstream)
     - no-cython-runtime-requirement.patch
+    # declare MS_WIN64 for min64 compiler
+    - MS_WIN64.patch  # [win]
 
 build:
   number: 1
@@ -31,13 +33,20 @@ requirements:
     - {{ compiler('m2w64_c') }}  # [win]
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
+    # extras for cross-compiling
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - cython                              # [build_platform != target_platform]
+    - numpy                               # [build_platform != target_platform]
+    - python                              # [build_platform != target_platform]
   host:
     - cython
     - libpython  # [win]
     - numpy
     - pip
     - python
-    - setuptools
+    - setuptools  # [not win]
+    # work around missing ucrt library
+    - setuptools <59.2.0  # [win]
     - setuptools-scm
     - suitesparse
   run:
