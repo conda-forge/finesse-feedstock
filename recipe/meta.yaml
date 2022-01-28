@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a1" %}
+{% set version = "3.0a2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: a2645e8b3f39b34861ebf030dae81b49aa872f33a2782def5b327df74a4ea63a
+  sha256: 21c97dab8cac2d7c550f3bf5c71e6729f33ee526f0945fd2e9ae24fda1e7bb2b
   patches:
     # improve parallel build
     # see https://git.ligo.org/finesse/finesse3/-/merge_requests/82
@@ -21,8 +21,8 @@ source:
     - MS_WIN64.patch  # [win]
 
 build:
-  number: 1
-  skip: true   # [py<38]
+  number: 0
+  skip: true  # [py<38]
   entry_points:
     - kat3 = finesse.__main__:cli
   script: {{ PYTHON }} -m pip install . -vv  # [not win]
