@@ -31,7 +31,7 @@ build:
     # See https://git.ligo.org/finesse/finesse3/-/issues/438
     # See https://git.ligo.org/finesse/finesse3/-/issues/463 
     - {{ PYTHON }} setup.py build_ext --inplace --compiler=mingw32  # [win]
-    - {{ PYTHON }} setup.py install --no-compile # [win]
+    - {{ PYTHON }} setup.py install --no-compile  # [win]
 
 requirements:
   build:
