@@ -21,7 +21,7 @@ source:
     # - MS_WIN64.patch  # [win]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<38]
   entry_points:
     - kat3 = finesse.__main__:cli
