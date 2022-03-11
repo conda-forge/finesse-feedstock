@@ -95,7 +95,7 @@ about:
   dev_url: https://git.ligo.org/finesse/finesse3.git
   doc_url: https://finesse.docs.ligo.org/finesse3/
   license: GPL-3.0-or-later
-  license_file: LICENSES.md
+  license_file: LICENSE.md
   summary: A simulation tool for modelling laser interferometers
   description: |
     Finesse 3 is a Python based interferometer simulation software.
