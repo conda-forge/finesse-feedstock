@@ -27,11 +27,11 @@ build:
     - kat3 = finesse.__main__:cli
   script:
     - {{ PYTHON }} -m pip install . -vv  # [not win]
-    # Windows issues...
-    # See https://git.ligo.org/finesse/finesse3/-/issues/438
-    # See https://git.ligo.org/finesse/finesse3/-/issues/463 
-    - {{ PYTHON }} setup.py build_ext --inplace --compiler=mingw32  # [win]
-    - {{ PYTHON }} setup.py install --no-compile  # [win]
+    # # Windows issues...
+    # # See https://git.ligo.org/finesse/finesse3/-/issues/438
+    # # See https://git.ligo.org/finesse/finesse3/-/issues/463 
+    # - {{ PYTHON }} setup.py build_ext --inplace --compiler=mingw32  # [win]
+    # - {{ PYTHON }} setup.py install --no-compile  # [win]
 
 requirements:
   build:
