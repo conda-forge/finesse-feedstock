@@ -8,6 +8,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: bbaaaaa013aedd104635c069d606b0e1ba3935a25313a061a570d7e7031e9d16
+  patches:
+    # declare MS_WIN64 for min64 compiler
+    - MS_WIN64.patch  # [win]
 
 build:
   number: 2
@@ -16,11 +19,6 @@ build:
     - kat3 = finesse.__main__:cli
   script:
     - {{ PYTHON }} -m pip install . -vv  # [not win]
-    # Windows issues...
-    # See https://git.ligo.org/finesse/finesse3/-/issues/438
-    # See https://git.ligo.org/finesse/finesse3/-/issues/463 
-    # - {{ PYTHON }} setup.py build_ext --compiler=mingw32  # [win]
-    # - {{ PYTHON }} setup.py install  # [win]
 
 requirements:
   build:
