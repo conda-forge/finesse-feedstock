@@ -8,17 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: bbaaaaa013aedd104635c069d606b0e1ba3935a25313a061a570d7e7031e9d16
-  #patches:
-    # improve parallel build
-    # see https://git.ligo.org/finesse/finesse3/-/merge_requests/82
-    # - parallel-build.patch
-    # patch test suite to prevent opening files twice
-    # see https://git.ligo.org/finesse/finesse3/-/merge_requests/80
-    # - test-tmp-files.patch
-    # remove unnecessary cython runtime requirement (fixed upstream)
-    # - no-cython-runtime-requirement.patch
-    # declare MS_WIN64 for min64 compiler
-    # - MS_WIN64.patch  # [win]
 
 build:
   number: 2
@@ -30,8 +19,8 @@ build:
     # Windows issues...
     # See https://git.ligo.org/finesse/finesse3/-/issues/438
     # See https://git.ligo.org/finesse/finesse3/-/issues/463 
-    - {{ PYTHON }} setup.py build_ext --compiler=mingw32  # [win]
-    - {{ PYTHON }} setup.py install  # [win]
+    # - {{ PYTHON }} setup.py build_ext --compiler=mingw32  # [win]
+    # - {{ PYTHON }} setup.py install  # [win]
 
 requirements:
   build:
