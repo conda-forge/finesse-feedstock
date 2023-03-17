@@ -8,9 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: a78c6ab43de6a23c97e55ec6238389d11de419ff1310a3c8b36a23e7a9fba99e
-  patches:
-    # declare MS_WIN64 for min64 compiler
-    - MS_WIN64.patch  # [win]
 
 build:
   number: 0
