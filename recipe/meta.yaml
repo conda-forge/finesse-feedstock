@@ -38,14 +38,10 @@ requirements:
     - pip
     - python
     - scipy >=1.4
-    - setuptools  # [not win]
+    - setuptools
     - setuptools-scm
     - tqdm
     - wheel
-    # work around missing ucrt library
-    # https://git.ligo.org/finesse/finesse3/-/issues/438
-    # https://git.ligo.org/finesse/finesse3/-/issues/463
-    - setuptools <59.2.0  # [win]
     - setuptools-scm
     - suitesparse
   run:
