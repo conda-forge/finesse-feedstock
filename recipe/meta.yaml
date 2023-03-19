@@ -21,8 +21,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}  # [not win]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }} 
     - libgomp  # [linux]
     - llvm-openmp  # [osx and arm64]
     # extras for cross-compiling
