@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: a78c6ab43de6a23c97e55ec6238389d11de419ff1310a3c8b36a23e7a9fba99e
+  patches:
+    - cc_not_in_docker.patch
 
 build:
   number: 0
@@ -72,6 +74,8 @@ test:
     - hypothesis
     - pip
     - pytest
+    - cython
+    - control <=0.9.2 # using greater than this seems to fail pip check tests as version is 0.0.0??
   source_files:
     - tests/
   imports:
