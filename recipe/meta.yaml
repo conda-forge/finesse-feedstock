@@ -9,7 +9,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: a78c6ab43de6a23c97e55ec6238389d11de419ff1310a3c8b36a23e7a9fba99e
   patches:
-    - cc_not_in_docker.patch
+    - cc_not_in_docker.patch # See https://gitlab.com/ifosim/finesse/finesse3/-/issues/546 should have been fixed for a7
 
 build:
   number: 0
@@ -17,7 +17,7 @@ build:
   entry_points:
     - kat3 = finesse.__main__:cli
   script:
-    - {{ PYTHON }} -m pip install . -vv  # [not win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
