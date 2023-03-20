@@ -73,6 +73,7 @@ test:
     - control <=0.9.2 # using greater than this seems to fail pip check tests as version is 0.0.0??
   source_files:
     - tests/
+    - pyproject.toml
   imports:
     - finesse
     - finesse.analysis
@@ -80,7 +81,8 @@ test:
     # check requirements
     - python -m pip check
     # run unit tests
-    - python -m pytest tests --import-mode=importlib
+    - ls
+    - python -m pytest tests
     # check entry points
     - kat3 --help
 
