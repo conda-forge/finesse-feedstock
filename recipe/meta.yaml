@@ -80,7 +80,7 @@ test:
     # check requirements
     - python -m pip check
     # run unit tests
-    - python -m pytest tests/
+    - python -m pytest tests --import-mode=importlib
     # check entry points
     - kat3 --help
 
