@@ -24,6 +24,7 @@ requirements:
     - {{ compiler('c') }} 
     - libgomp  # [linux]
     - llvm-openmp  # [osx and arm64]
+    - vs2019_win-64 # [win]
     # extras for cross-compiling
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython                              # [build_platform != target_platform]
