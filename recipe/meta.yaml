@@ -38,7 +38,7 @@ requirements:
     - scipy >=1.4
     - setuptools 
     - setuptools-scm
-    - tqdm >= 4.40
+    - tqdm >=4.40
     - wheel
     - suitesparse
     - quantiphy
@@ -58,7 +58,7 @@ requirements:
     - sly >=0.4
     - sympy >=1.6
     - tabulate >=0.8.7
-    - tqdm >= 4.40
+    - tqdm >=4.40
     - quantiphy
 
 test:
