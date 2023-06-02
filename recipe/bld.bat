@@ -8,11 +8,11 @@ if not exist "%CFGDIR%\" mkdir "%CFGDIR\"
 if errorlevel 1 exit 1
 echo [config] > "%CFG%"
 if errorlevel 1 exit 1
-echo compiler=mingw32 >> "%CFG%"
+echo compiler=msvc >> "%CFG%"
 echo [build] >> "%CFG%"
-echo compiler=mingw32 >> "%CFG%"
+echo compiler=msvc >> "%CFG%"
 echo [build_ext] >> "%CFG%"
-echo compiler=mingw32 >> "%CFG%"
+echo compiler=msvc >> "%CFG%"
 
 :: build the package
 %PYTHON% -m pip install . -vv
