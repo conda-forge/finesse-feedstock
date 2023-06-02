@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a3" %}
+{% set version = "3.0a7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: bbaaaaa013aedd104635c069d606b0e1ba3935a25313a061a570d7e7031e9d16
+  sha256: 922facb5e765fbf982eb2e879d330d7a93fa8de7d79a6f1cd59464e20abf42b0
   patches:
     # declare MS_WIN64 for min64 compiler
     - MS_WIN64.patch  # [win]
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<38]
   entry_points:
     - kat3 = finesse.__main__:cli
