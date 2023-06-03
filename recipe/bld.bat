@@ -8,5 +8,5 @@ if errorlevel 1 exit 1
 
 :: build the package
 set CYTHON_FORCE=
-%PYTHON% setup.py install
+%PYTHON% -m pip install .
 if errorlevel 1 exit 1
