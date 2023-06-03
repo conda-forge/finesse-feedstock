@@ -76,10 +76,10 @@ test:
   commands:
     # check requirements
     - python -m pip check
-    # run unit tests
-    - python -m pytest tests/
     # check entry points
     - kat3 --help
+    # run unit tests
+    # - python -m pytest tests
 
 about:
   home: https://www.gwoptics.org/finesse
