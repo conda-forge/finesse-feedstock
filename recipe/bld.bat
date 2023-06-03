@@ -7,6 +7,6 @@ set CYTHON_FORCE=1
 if errorlevel 1 exit 1
 
 :: build the package
-set CYTHON_FORCE=0
-%PYTHON% -m pip install . -vv
+set CYTHON_FORCE=
+%PYTHON% setup.py install
 if errorlevel 1 exit 1
