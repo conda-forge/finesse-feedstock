@@ -14,8 +14,6 @@ build:
   skip: true  # [py<38 or py>310]
   entry_points:
     - kat3 = finesse.__main__:cli
-  script:
-    - {{ PYTHON }} -m pip install . -vv  # [not win]
 
 requirements:
   build:
