@@ -8,6 +8,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: f310acd0843a4e68baf77bec83d22040a076db17e8cb462a3a032c2d04ce9bcb
+  patches:
+    # force windows cythonize
+    - force_cythonize.patch  # [win]
 
 build:
   number: 0
@@ -77,7 +80,7 @@ test:
     # check entry points
     - kat3 --help
     # run unit tests
-    # - python -m pytest tests
+    - python -m pytest tests --import-mode=importlib
 
 about:
   home: https://www.gwoptics.org/finesse

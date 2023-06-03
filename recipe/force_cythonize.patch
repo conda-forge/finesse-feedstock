@@ -1,0 +1,11 @@
+diff --git a/setup.py b/setup.py
+index 42b71b74..de155fdc 100644
+--- a/setup.py
++++ b/setup.py
+@@ -393,6 +393,7 @@ def ext_modules():
+         compiler_directives=compiler_directives,
+         gdb_debug=False,
+         compile_time_env=compile_time_env,
++        force=True if SYS_NAME == "Windows" else False
+     )
+     
