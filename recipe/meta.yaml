@@ -13,7 +13,7 @@ source:
     - force_cythonize.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<38 or py>310]
   entry_points:
     - kat3 = finesse.__main__:cli
