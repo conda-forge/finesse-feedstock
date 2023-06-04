@@ -13,8 +13,8 @@ source:
     - force_cythonize.patch  # [win]
 
 build:
-  number: 0
-  skip: true  # [py<38 or py>310]
+  number: 1
+  skip: true  # [py<38]
   entry_points:
     - kat3 = finesse.__main__:cli
 
@@ -26,14 +26,12 @@ requirements:
     # extras for cross-compiling
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython                              # [build_platform != target_platform]
-    - numpy 1.20                          # [py<310 and build_platform != target_platform]
-    - numpy                               # [py>=310 and build_platform != target_platform]
+    - numpy                               # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
   host:
     - cython
     - libpython  # [win]
-    - numpy 1.20  # [py<310]
-    - numpy  # [py>=310]
+    - numpy
     - pip
     - python
     - scipy >=1.4
