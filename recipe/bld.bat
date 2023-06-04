@@ -2,5 +2,5 @@
 rmdir /s /q src\finesse.egg-info
 
 :: build the package
-%PYTHON% pip install . -vv
+%PYTHON% -m pip install . -vv
 if errorlevel 1 exit 1
