@@ -42,7 +42,7 @@ requirements:
     - suitesparse
     - quantiphy
   run:
-    - cython < 3.0
+    - cython <3.0
     - click >=7.1
     - click-default-group >=1.2.2
     - control >=0.9
