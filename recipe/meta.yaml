@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a8" %}
+{% set version = "3.0a11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: f310acd0843a4e68baf77bec83d22040a076db17e8cb462a3a032c2d04ce9bcb
+  sha256: 28d1246ed1e0765be74aaead36ac56c081a0eba38cd32e5c9520821095cef97c
   patches:
     # force windows cythonize
     - force_cythonize.patch  # [win]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<38]
   entry_points:
     - kat3 = finesse.__main__:cli
