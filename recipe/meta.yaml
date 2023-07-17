@@ -23,13 +23,14 @@ requirements:
     - {{ compiler('c') }}
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
+    - cython <3.0
     # extras for cross-compiling
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython <3.0                         # [build_platform != target_platform]
     - numpy                               # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
   host:
-    - cython
+    - cython <3.0
     - libpython  # [win]
     - numpy
     - pip
