@@ -13,7 +13,7 @@ source:
     - force_cythonize.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<38]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -61,7 +61,7 @@ requirements:
     - tabulate >=0.8.7
     - tqdm
     - quantiphy
-    - blockdiag >=3.0
+    - blockdiag >=3.0 # [py<311] this filter should be removed when https://github.com/conda-forge/funcparserlib-feedstock/pull/13 has been resolved
 
 test:
   requires:
