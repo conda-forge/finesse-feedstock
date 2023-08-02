@@ -61,7 +61,7 @@ requirements:
     - tabulate >=0.8.7
     - tqdm
     - quantiphy
-    - blockdiag >=3.0 # [py<311] this filter should be removed when https://github.com/conda-forge/funcparserlib-feedstock/pull/13 has been resolved
+    - blockdiag >=3.0  # [py<311] this filter should be removed when https://github.com/conda-forge/funcparserlib-feedstock/pull/13 has been resolved
 
 test:
   requires:
