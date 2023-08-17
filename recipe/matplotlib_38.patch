@@ -1,0 +1,13 @@
+diff --git a/setup.cfg b/setup.cfg
+index 08bf4dbc..c3cc4a60 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -43,7 +43,7 @@ install_requires =
+     # packaging - get in touch with developers.
+     numpy >= 1.20
+     scipy >= 1.4
+-    matplotlib >= 3.5
++    matplotlib >= 3.5, <3.8 # 3.8rc1 doesn't seem to work
+     networkx >= 2.4
+     sly >= 0.4
+     click >= 7.1
