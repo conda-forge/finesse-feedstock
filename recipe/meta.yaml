@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a16" %}
+{% set version = "3.0a18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: 56b5c28091cd4f2320fb74b7a62f48d7facc24f91994a3210e95df088d06bcec
+  sha256: 31e07168880560ac5a807652f1e4cda9f622692a6d58cc26b8e648ef78ec2625
   patches:
     # force windows cythonize
     - force_cythonize.patch  # [win]
