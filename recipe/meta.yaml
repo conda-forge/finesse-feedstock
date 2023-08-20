@@ -10,7 +10,7 @@ source:
   sha256: 0be1d1079ad4084e8b2f12fba595eaaef7a9317390fa91800be4eb75ea45ba42
   patches:
     # force windows cythonize
-    - force_cythonize.patch  # [win]
+    - force-cythonize.patch  # [win]
 
 build:
   number: 0
