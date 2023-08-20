@@ -8,9 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: 0be1d1079ad4084e8b2f12fba595eaaef7a9317390fa91800be4eb75ea45ba42
-  patches:
-    # force windows cythonize
-    - force_cythonize.patch  # [win]
 
 build:
   number: 0
