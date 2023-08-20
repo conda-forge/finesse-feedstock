@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a18" %}
+{% set version = "3.0a19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: 31e07168880560ac5a807652f1e4cda9f622692a6d58cc26b8e648ef78ec2625
+  sha256: 0be1d1079ad4084e8b2f12fba595eaaef7a9317390fa91800be4eb75ea45ba42
   patches:
     # force windows cythonize
     - force_cythonize.patch  # [win]
-    - matplotlib_38.patch  # [win]
 
 build:
   number: 0
