@@ -35,7 +35,7 @@ requirements:
     - numpy
     - pip
     - python
-    - scipy >=1.4
+    - scipy >=1.4,<1.11
     - setuptools
     - setuptools-scm
     - tqdm
@@ -55,7 +55,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - pyspellchecker >=0.6
     - python
-    - scipy >=1.4
+    - scipy >=1.4,<1.11
     - sly >=0.4
     - sympy >=1.6
     - tqdm
