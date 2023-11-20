@@ -23,19 +23,19 @@ requirements:
     - {{ compiler('c') }}
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
-    - cython >=0.29.36,<3.0
+    - cython >=0.29.36
     # extras for cross-compiling
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
-    - cython >=0.29.36,<3.0               # [build_platform != target_platform]
+    - cython >=0.29.36                    # [build_platform != target_platform]
     - numpy                               # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
   host:
-    - cython >=0.29.36,<3.0
+    - cython >=0.29.36
     - libpython  # [win]
     - numpy
     - pip
     - python
-    - scipy >=1.4,<1.11
+    - scipy >=1.4
     - setuptools
     - setuptools-scm
     - tqdm
@@ -43,7 +43,7 @@ requirements:
     - suitesparse
     - quantiphy
   run:
-    - cython >=0.29.36,<3.0
+    - cython >=0.29.36
     - click >=7.1
     - click-default-group >=1.2.2
     - control >=0.9
@@ -55,7 +55,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - pyspellchecker >=0.6
     - python
-    - scipy >=1.4,<1.11
+    - scipy >=1.4
     - sly >=0.4
     - sympy >=1.6
     - tqdm
