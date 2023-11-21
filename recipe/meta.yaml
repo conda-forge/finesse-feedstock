@@ -11,6 +11,7 @@ source:
   patches:
     # force windows cythonize
     - force-cythonize.patch  # [win]
+    - scipy-setup-apple-silicon.patch  # [osx-arm64]
 
 build:
   number: 0
