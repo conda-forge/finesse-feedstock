@@ -27,7 +27,7 @@ requirements:
     # extras for cross-compiling
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython >=0.29.36                    # [build_platform != target_platform]
-    - numpy                               # [build_platform != target_platform]
+    - numpy >=1.26                        # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
   host:
     - cython >=0.29.36
