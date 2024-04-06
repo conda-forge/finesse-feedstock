@@ -86,6 +86,7 @@ test:
     - isort
     - jupyter-sphinx >= 0.4
     - pyyaml
+    - pip
   source_files:
     - tests/
     - scripts/
