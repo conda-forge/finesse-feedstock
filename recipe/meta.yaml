@@ -76,17 +76,18 @@ requirements:
 
 test:
   requires:
+    - pytest
+    - pytest-benchmark
     - faker
     - hypothesis
-    - pip
-    - pytest
     - docutils
     - black
     - autoflake
     - isort
     - jupyter-sphinx >= 0.4
-    - pytest-random-order
     - pyyaml
+    - pip:
+      - pytest-random-order
   source_files:
     - tests/
     - scripts/
