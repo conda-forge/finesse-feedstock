@@ -14,6 +14,11 @@ source:
     - ignore-scipy-checks.patch
     # force windows cythonize
     - force-cythonize.patch  # [win]
+    # need to stop more recent control packages being installed
+    # this will stop being an issue once the pinned numpy gets
+    # higher than 1.22 for control, why it's not a problem on
+    # unix/mac I don't know
+    - limit-control.patch  # [win and py<=310]
 
 build:
   number: 2
@@ -30,12 +35,12 @@ requirements:
     # extras for cross-compiling
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython >=0.29.36                    # [build_platform != target_platform]
-    - numpy >=1.23                        # [build_platform != target_platform]
+    - numpy                               # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
   host:
     - cython >=0.29.36
     - libpython  # [win]
-    - numpy >=1.23 # numpy 1.23 requirement as control package 0.10 is causing issues
+    - numpy
     - pip
     - python
     - scipy >=1.4
@@ -49,7 +54,9 @@ requirements:
     - cython >=0.29.36
     - click >=7.1
     - click-default-group >=1.2.2
-    - control >0.9
+    - control >0.9  # [not win]
+    - control >0.9  # [win and py>310]
+    - control <0.10.0  # [win and py<=310]
     - deprecated >=1.2
     - h5py >=3.0
     - matplotlib-base >=3.5
