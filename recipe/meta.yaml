@@ -82,6 +82,7 @@ test:
     - pytest
   source_files:
     - tests/
+    - scripts/
   imports:
     - finesse
     - finesse.analysis
