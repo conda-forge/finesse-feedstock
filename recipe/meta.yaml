@@ -14,9 +14,14 @@ source:
     - ignore-scipy-checks.patch
     # force windows cythonize
     - force-cythonize.patch  # [win]
-
+    # need to stop more recent control packages being installed
+    # this will stop being an issue once the pinned numpy gets
+    # higher than 1.22 for control, why it's not a problem on
+    # unix/mac I don't know
+    - limit-control.patch  # [win and py<=310]
+    - limit-networkx.patch  # [py<=39]
 build:
-  number: 1
+  number: 2
   skip: true  # [py<39]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -49,12 +54,15 @@ requirements:
     - cython >=0.29.36
     - click >=7.1
     - click-default-group >=1.2.2
-    - control >=0.9
+    - control >0.9  # [not win]
+    - control >0.9  # [win and py>310]
+    - control <0.10.0  # [win and py<=310]
     - deprecated >=1.2
     - h5py >=3.0
     - matplotlib-base >=3.5
     - more-itertools >=8.7
-    - networkx >=2.4
+    - networkx >=2.4  # [py>39]
+    - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
     - {{ pin_compatible('numpy') }}
     - pyspellchecker >=0.6
     - python
@@ -100,3 +108,4 @@ extra:
     - danielbrown2
     - duncanmmacleod
     - freise
+    - mironleon

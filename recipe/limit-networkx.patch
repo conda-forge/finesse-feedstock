@@ -1,0 +1,11 @@
+--- setup.cfg
++++ setup.cfg
+@@ -37,7 +37,7 @@
+ 	numpy >= 1.20, < 2.0
+ 	scipy >= 1.4 # NB: for cython3 SciPy>=1.11.2, see !159#note_1619762810
+ 	matplotlib >= 3.5
+-	networkx >= 2.4
++	networkx < 3.3
+ 	sly >= 0.4
+ 	click >= 7.1
+ 	click-default-group >= 1.2.2

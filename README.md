@@ -277,4 +277,5 @@ Feedstock Maintainers
 * [@danielbrown2](https://github.com/danielbrown2/)
 * [@duncanmmacleod](https://github.com/duncanmmacleod/)
 * [@freise](https://github.com/freise/)
+* [@mironleon](https://github.com/mironleon/)
 
