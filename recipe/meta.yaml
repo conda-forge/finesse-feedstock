@@ -19,7 +19,7 @@ source:
     # higher than 1.22 for control, why it's not a problem on
     # unix/mac I don't know
     - limit-control.patch  # [win and py<=310]
-
+    - limit-networkx.patch  # [win and py<=39]
 build:
   number: 2
   skip: true  # [py<39]
@@ -29,7 +29,6 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - importlib_metadata >=3.7
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
     - cython >=0.29.36
@@ -51,7 +50,6 @@ requirements:
     - wheel
     - suitesparse
     - quantiphy
-    - importlib_metadata >=3.7
   run:
     - cython >=0.29.36
     - click >=7.1
@@ -63,7 +61,11 @@ requirements:
     - h5py >=3.0
     - matplotlib-base >=3.5
     - more-itertools >=8.7
-    - networkx >=2.4
+    - networkx >=2.4  # [not win]
+    # TypeError: entry_points() got an unexpected keyword argument 'group'
+    # coming from networkx for windows python 3.9 only...
+    - networkx >=2.4  # [win and py>39]
+    - networkx <3.3  # [win and py<=39]
     - {{ pin_compatible('numpy') }}
     - pyspellchecker >=0.6
     - python
@@ -72,7 +74,6 @@ requirements:
     - sympy >=1.6
     - tqdm
     - quantiphy
-    - importlib_metadata >=3.7
 #    - blockdiag >=3.0  # [py<311] this filter should be removed when https://github.com/conda-forge/funcparserlib-feedstock/pull/13 has been resolved
 #    - pillow <10.0 # blockdiag issues: site-packages/blockdiag/imagedraw/png.py:282: DeprecationWarning: getsize is deprecated and will be removed in Pillow 10 (2023-07-01). Use getbbox or getlength instead.
 
