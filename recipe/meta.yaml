@@ -19,7 +19,7 @@ source:
     # higher than 1.22 for control, why it's not a problem on
     # unix/mac I don't know
     - limit-control.patch  # [win and py<=310]
-    - limit-networkx.patch  # [win and py<=39]
+    - limit-networkx.patch  # [py<=39]
 build:
   number: 2
   skip: true  # [py<39]
@@ -61,11 +61,8 @@ requirements:
     - h5py >=3.0
     - matplotlib-base >=3.5
     - more-itertools >=8.7
-    - networkx >=2.4  # [not win]
-    # TypeError: entry_points() got an unexpected keyword argument 'group'
-    # coming from networkx for windows python 3.9 only...
-    - networkx >=2.4  # [win and py>39]
-    - networkx <3.3  # [win and py<=39]
+    - networkx >=2.4  # [py>39]
+    - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
     - {{ pin_compatible('numpy') }}
     - pyspellchecker >=0.6
     - python
