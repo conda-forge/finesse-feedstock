@@ -1,13 +1,13 @@
 diff --git a/setup.py b/setup.py
-index c3a8368b..62ce860b 100644
+index 30cdc784..bfb2941f 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -279,7 +279,7 @@ def ext_modules():
-     # Check that we don't use the unsupported combination of cython3 with
-     # SciPy<1.11.2. Note that we don't yet want to drop support for SciPy<1.11.2
-     # because of the IGWN Conda environments.
--    scipy_cython_check()
-+    # scipy_cython_check()
+@@ -477,7 +477,7 @@ def check_pyx_files(pyx_files: KeysView[Path]) -> None:
 
-     # Argument pattern for extensions requiring OpenMP are annoying
-     # various openmp implementations exist. Generally ok on Linux and windows
+
+ if __name__ == "__main__":
+-    scipy_cython_version_check()
++    #scipy_cython_version_check()
+     setup(
+         ext_modules=get_ext_modules(),
+         cmdclass={"build_ext": finesse_build_ext},
