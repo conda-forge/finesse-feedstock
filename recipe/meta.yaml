@@ -102,7 +102,7 @@ test:
     # check entry points
     - kat3 --help
     # run unit tests
-    - python -m pytest tests --import-mode=importlib
+    - python -m pytest tests --import-mode=importlib --benchmark-skip
 
 about:
   home: https://www.gwoptics.org/finesse
