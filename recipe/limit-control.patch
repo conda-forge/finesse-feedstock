@@ -1,39 +1,11 @@
-diff --git a/environment-win.yml b/environment-win.yml
-index 7b091cc3..9d85af8c 100644
---- a/environment-win.yml
-+++ b/environment-win.yml
-@@ -28,7 +28,7 @@ dependencies:
-   - click >= 7.1
-   - click-default-group >= 1.2.2
-   - tabulate >= 0.8.7
--  - control >= 0.9
-+  - control < 10
-   - sympy >= 1.6
-   - deprecated >= 1.2
-   - pyspellchecker >= 0.6
-diff --git a/environment.yml b/environment.yml
-index 07021591..3d7131ec 100644
---- a/environment.yml
-+++ b/environment.yml
-@@ -28,7 +28,7 @@ dependencies:
-   - click >= 7.1
-   - click-default-group >= 1.2.2
-   - tabulate >= 0.8.7
--  - control >= 0.9
-+  - control < 10
-   - sympy >= 1.6
-   - deprecated >= 1.2
-   - pyspellchecker >= 0.6
-diff --git a/setup.cfg b/setup.cfg
-index dc9942d9..6bb1391b 100644
---- a/setup.cfg
-+++ b/setup.cfg
-@@ -49,7 +49,7 @@ install_requires =
-     sly >= 0.4
-     click >= 7.1
-     click-default-group >= 1.2.2
--    control >= 0.9
-+    control < 10
-     cython >= 0.29.36
-     sympy >= 1.6
-     more-itertools >= 8.7
+--- setup.cfg
++++ setup.cfg
+@@ -41,7 +41,7 @@
+ 	sly >= 0.4
+ 	click >= 7.1
+ 	click-default-group >= 1.2.2
+-	control >= 0.9
++	control < 0.11
+ 	cython >= 0.29.36
+ 	sympy >= 1.6
+ 	more-itertools >= 8.7
