@@ -90,6 +90,9 @@ test:
   source_files:
     - tests/
     - scripts/
+    - environment.yml
+    - environment-win.yml
+    - pyproject.toml
   imports:
     - finesse
     - finesse.analysis
