@@ -45,6 +45,10 @@ requirements:
     - wheel
     - suitesparse
     - quantiphy
+    # windows 3.9 was complaining about:
+    #   TypeError: entry_points() got an unexpected keyword argument 'group'
+    # which needs a more recent importlib-metadata apparently
+    - importlib-metadata >7 
   run:
     - cython >=0.29.36
     - click >=7.1
