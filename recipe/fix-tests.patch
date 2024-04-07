@@ -1,0 +1,14 @@
+diff --git a/tests/validation/actions/test_locking_actions.py b/tests/validation/actions/test_locking_actions.py
+index c9839ab3..4f1441b7 100644
+--- a/tests/validation/actions/test_locking_actions.py
++++ b/tests/validation/actions/test_locking_actions.py
+@@ -12,8 +12,6 @@ from finesse.analysis.actions import (
+ )
+ import pytest
+
+-finesse.configure(plotting=True)
+-
+
+ @pytest.fixture
+ def locks_model():
+ 

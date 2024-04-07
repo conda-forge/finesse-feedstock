@@ -20,6 +20,8 @@ source:
     # unix/mac I don't know
     - limit-control.patch  # [win and py<=310]
     - limit-networkx.patch  # [py<=39]
+    - fix-tests.patch
+    
 build:
   number: 0
   skip: true  # [py<39]
