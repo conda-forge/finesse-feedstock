@@ -20,10 +20,11 @@ source:
     # unix/mac I don't know
     - limit-control.patch  # [win and py<=310]
     - limit-networkx.patch  # [py<=39]
+    # some issue with matplotlib style paths maybe
     # the style setting is causing errors on windows, the style file should be
-    # accessed like a package when distributing them
+    # accessed like a package when distributing them, could be a 3.8.4 issue
     # https://matplotlib.org/stable/users/explain/customizing.html#distributing-styles
-    - fix-mpl-style-setting.patch
+    - fix-mpl-style-setting.patch 
 
 build:
   number: 0
@@ -64,7 +65,7 @@ requirements:
     - control <0.10.0  # [win and py<=310]
     - deprecated >=1.2
     - h5py >=3.0
-    - matplotlib-base >=3.5
+    - matplotlib-base >=3.5,<3.8.4  # some issue with matplotlib style paths maybe
     - more-itertools >=8.7
     - networkx >=2.4  # [py>39]
     - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
