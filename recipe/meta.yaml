@@ -19,9 +19,8 @@ source:
     # higher than 1.22 for control, why it's not a problem on
     # unix/mac I don't know
     - limit-control.patch  # [win and py<=310]
-    # the style setting is causing errors on windows, the style file should be
-    # accessed like a package when distributing them, could be a 3.8.4 issue
-    # https://matplotlib.org/stable/users/explain/customizing.html#distributing-styles
+    # When this is fixed in the networkx feedstock this can probably
+    # be removed https://github.com/conda-forge/networkx-feedstock/pull/57
     - limit-networkx.patch  # [py<=39]
 
 build:
