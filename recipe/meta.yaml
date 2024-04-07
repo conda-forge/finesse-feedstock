@@ -21,7 +21,7 @@ source:
     - limit-control.patch  # [win and py<=310]
     - limit-networkx.patch  # [py<=39]
     - fix-tests.patch
-    
+
 build:
   number: 0
   skip: true  # [py<39]
@@ -104,7 +104,7 @@ test:
     # check entry points
     - kat3 --help
     # run unit tests
-    - python -m pytest tests --import-mode=importlib --benchmark-skip
+    - python -m pytest tests --import-mode=importlib --benchmark-skip --ignore=benchmark --ignore=tests/benchmark
 
 about:
   home: https://www.gwoptics.org/finesse
