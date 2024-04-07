@@ -1,0 +1,10 @@
+diff --git a/MANIFEST.in b/MANIFEST.in
+index 803de5fb..7ad328b2 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -3,3 +3,4 @@ prune examples
+ prune docs
+ prune code_review
+ include pyproject.toml
++include src/finesse/plotting/style/*.mplstyle
+\ No newline at end of file

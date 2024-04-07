@@ -1,11 +1,13 @@
---- setup.cfg
-+++ setup.cfg
-@@ -41,7 +41,7 @@
- 	sly >= 0.4
- 	click >= 7.1
- 	click-default-group >= 1.2.2
--	control >= 0.9
-+	control < 0.10
- 	cython >= 0.29.36
- 	sympy >= 1.6
- 	more-itertools >= 8.7
+diff --git a/pyproject.toml b/pyproject.toml
+index d7d4995d..a64f808e 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -44,7 +44,7 @@ dependencies = [
+     "sly >= 0.4",
+     "click >= 7.1",
+     "click-default-group >= 1.2.2",
+-    "control >= 0.9",
++    "control < 0.10",
+     "sympy >= 1.6",
+     "more-itertools >= 8.7",
+     "tqdm >= 4.40",
