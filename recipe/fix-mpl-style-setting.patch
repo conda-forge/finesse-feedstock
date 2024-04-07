@@ -1,0 +1,19 @@
+diff --git a/src/finesse/plotting/tools.py b/src/finesse/plotting/tools.py
+index 296f7bab..1c8601fd 100644
+--- a/src/finesse/plotting/tools.py
++++ b/src/finesse/plotting/tools.py
+@@ -65,11 +65,12 @@ def init(mode="display", dpi=None, fmts=None):
+     # TODO (sjr) handle plotting options in user config
+
+     if mode == "display":
+-        use(["default"])
++        mpl.style.use("finesse.plotting.style.default")
+     elif mode == "paper":
+         if not _in_ipython():
+-            mpl.use("pgf")
+-        use(["default", "paper"])
++            mpl.style.use("pgf")
++        else:
++            mpl.style.use("finesse.plotting.style.default")
+     else:
+         raise (BaseException("Plotting mode must be either 'display' or 'paper'."))
