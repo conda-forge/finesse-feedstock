@@ -22,7 +22,6 @@ source:
     # When this is fixed in the networkx feedstock this can probably
     # be removed https://github.com/conda-forge/networkx-feedstock/pull/57
     - limit-networkx.patch  # [py<=39]
-    - fix-manifest.patch
 
 build:
   number: 0
