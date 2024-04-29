@@ -12,8 +12,6 @@ source:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
     - ignore-scipy-checks.patch
-    # force windows cythonize
-    - force-cythonize.patch  # [win]
     # need to stop more recent control packages being installed
     # this will stop being an issue once the pinned numpy gets
     # higher than 1.22 for control, why it's not a problem on
