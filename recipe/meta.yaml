@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a22" %}
+{% set version = "3.0a23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: f50ac1f30128c04c6dde9d6ceabb597d28dacb4adb3cd34c95f2e18e8a90b3f2
+  sha256: fb579986265005f61e0eb32f9d1aa02d18a237e6e1dec4114516e4d89819ea9c
   patches:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
@@ -33,6 +33,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
     - cython >=0.29.36
@@ -106,7 +107,7 @@ test:
     # check entry points
     - kat3 --help
     # Skipping still runs test_benchmark_creation which fails on linux 
-    - rm -rf tests/benchmarks 
+    - rm -rf tests/benchmarks
     # run unit tests
     - python -m pytest tests --import-mode=importlib --benchmark-skip
 
