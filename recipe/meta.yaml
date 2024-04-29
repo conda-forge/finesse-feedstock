@@ -57,7 +57,9 @@ requirements:
     - control <0.10.0  # [win and py<=310]
     - deprecated >=1.2
     - h5py >=3.0
-    - matplotlib-base >=3.5
+    - matplotlib-base >=3.5  # [not win]
+    # numpy version issues
+    - matplotlib-base >=3.5,<3.9  # [win]
     - more-itertools >=8.7
     - networkx >=2.4  # [py>39]
     - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
