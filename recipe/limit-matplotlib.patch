@@ -8,6 +8,6 @@ index bc91ab25..a653c14a 100644
      "scipy >= 1.4",  #NB: for cython3 SciPy>=1.11.2, see !159#note_1619762810.
 -    "matplotlib >= 3.5",
 +    "matplotlib < 3.9",
-     "networkx >= 2.4",
+     "networkx < 3.3",
      "sly >= 0.4",
      "click >= 7.1",
