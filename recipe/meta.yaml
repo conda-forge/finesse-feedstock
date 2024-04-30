@@ -19,7 +19,8 @@ source:
     - limit-control.patch  # [win and py<=310]
     # Networkx 3.3 dropped support for python 3.9, removing this makes the windows build fail
     - limit-networkx.patch  # [py<=39]
-    - limit-matplotlib.patch  # [win and py<=310]
+    - limit-matplotlib310.patch  # [win and py==310]
+    - limit-matplotlib39.patch  # [win and py==39]
 
 build:
   number: 0
