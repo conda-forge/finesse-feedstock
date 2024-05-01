@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a22" %}
+{% set version = "3.0a23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: f50ac1f30128c04c6dde9d6ceabb597d28dacb4adb3cd34c95f2e18e8a90b3f2
+  sha256: fb579986265005f61e0eb32f9d1aa02d18a237e6e1dec4114516e4d89819ea9c
   patches:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
     - ignore-scipy-checks.patch
-    # force windows cythonize
-    - force-cythonize.patch  # [win]
     # need to stop more recent control packages being installed
     # this will stop being an issue once the pinned numpy gets
     # higher than 1.22 for control, why it's not a problem on
     # unix/mac I don't know
     - limit-control.patch  # [win and py<=310]
-    # When this is fixed in the networkx feedstock this can probably
-    # be removed https://github.com/conda-forge/networkx-feedstock/pull/57
+    # Networkx 3.3 dropped support for python 3.9, removing this makes the windows build fail
     - limit-networkx.patch  # [py<=39]
-    - fix-manifest.patch
+    - limit-matplotlib310.patch  # [win and py==310]
+    - limit-matplotlib39.patch  # [win and py==39]
 
 build:
   number: 0
@@ -63,7 +61,9 @@ requirements:
     - control <0.10.0  # [win and py<=310]
     - deprecated >=1.2
     - h5py >=3.0
-    - matplotlib-base >=3.5
+    - matplotlib-base >=3.5  # [not win]
+    # numpy version issues
+    - matplotlib-base >=3.5,<3.9  # [win]
     - more-itertools >=8.7
     - networkx >=2.4  # [py>39]
     - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
@@ -91,6 +91,7 @@ test:
     - jupyter-sphinx >= 0.4
     - pyyaml
     - pip
+    - psutil
   source_files:
     - tests/
     - scripts/
