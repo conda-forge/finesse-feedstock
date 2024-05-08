@@ -23,7 +23,7 @@ source:
     - limit-matplotlib39.patch  # [win and py==39]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<39]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -31,6 +31,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
     - cython >=0.29.36
