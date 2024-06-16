@@ -21,6 +21,7 @@ source:
     - limit-networkx.patch  # [py<=39]
     - limit-matplotlib310.patch  # [win and py==310]
     - limit-matplotlib39.patch  # [win and py==39]
+    - test_setup_off.patch
 
 build:
   number: 0
