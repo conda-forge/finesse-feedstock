@@ -38,12 +38,12 @@ requirements:
     # extras for cross-compiling
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython >=0.29.36                    # [build_platform != target_platform]
-    - numpy                               # [build_platform != target_platform]
+    - numpy >=2                             # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
   host:
     - cython >=0.29.36
     - libpython  # [win]
-    - numpy
+    - numpy >=2
     - pip
     - python
     - scipy >=1.4
@@ -63,6 +63,7 @@ requirements:
     - deprecated >=1.2
     - h5py >=3.0
     - matplotlib-base >=3.5  # [not win]
+    - numpy >= 1.22
     # numpy version issues
     - matplotlib-base >=3.5,<3.9  # [win]
     - more-itertools >=8.7
