@@ -24,7 +24,7 @@ source:
     - test_setup_off.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<39]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -69,7 +69,6 @@ requirements:
     - more-itertools >=8.7
     - networkx >=2.4  # [py>39]
     - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
-    - numpy
     - pyspellchecker >=0.6
     - python
     - scipy >=1.4
