@@ -32,6 +32,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
     - cython >=0.29.36
