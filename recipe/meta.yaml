@@ -68,7 +68,7 @@ requirements:
     - more-itertools >=8.7
     - networkx >=2.4  # [py>39]
     - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
-    - {{ pin_compatible('numpy') }}
+    - numpy
     - pyspellchecker >=0.6
     - python
     - scipy >=1.4
