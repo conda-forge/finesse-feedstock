@@ -63,7 +63,7 @@ requirements:
     - deprecated >=1.2
     - h5py >=3.0
     - matplotlib-base >=3.5  # [not win]
-    - numpy >= 1.22
+    - numpy >=1.22
     # numpy version issues
     - matplotlib-base >=3.5,<3.9  # [win]
     - more-itertools >=8.7
