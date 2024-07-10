@@ -1,10 +1,10 @@
 diff --git a/pyproject.toml b/pyproject.toml
-index d7d4995d..5f4b99c7 100644
+index d380bd72..3af7d7d6 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -40,7 +40,7 @@ dependencies = [
-     "numpy >= 1.20, < 2.0",
-     "scipy >= 1.4",  #NB: for cython3 SciPy>=1.11.2, see !159#note_1619762810.
+     "numpy >= 1.20",
+     "scipy >= 1.4",  #NB: for cython3 SciPy>=1.11.2, see !159#note_1619762810. For numpy 2 SciPy>=1.13.0
      "matplotlib >= 3.5",
 -    "networkx >= 2.4",
 +    "networkx < 3.3",
