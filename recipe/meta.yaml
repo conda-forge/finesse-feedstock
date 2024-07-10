@@ -12,15 +12,8 @@ source:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
     - ignore-scipy-checks.patch
-    # need to stop more recent control packages being installed
-    # this will stop being an issue once the pinned numpy gets
-    # higher than 1.22 for control, why it's not a problem on
-    # unix/mac I don't know
-    # - limit-control.patch  # [win and py<=310]
     # # Networkx 3.3 dropped support for python 3.9, removing this makes the windows build fail
-    # - limit-networkx.patch  # [py<=39]
-    # - limit-matplotlib310.patch  # [win and py==310]
-    # - limit-matplotlib39.patch  # [win and py==39]
+    - limit-networkx.patch  # [py<=39]
 
 build:
   number: 1
