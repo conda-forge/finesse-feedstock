@@ -1,13 +1,17 @@
 diff --git a/setup.py b/setup.py
-index 30cdc784..bfb2941f 100644
+index 84ced4cb..aee9f2b5 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -477,7 +477,7 @@ def check_pyx_files(pyx_files: KeysView[Path]) -> None:
-
-
+@@ -517,9 +517,9 @@ def check_pyx_files(pyx_files: KeysView[Path]) -> None:
+ 
+ 
  if __name__ == "__main__":
 -    scipy_cython_version_check()
-+    #scipy_cython_version_check()
+-    scipy_numpy_2_check()
+-    numpy_1_check()
++    # scipy_cython_version_check()
++    # scipy_numpy_2_check()
++    # numpy_1_check()
      setup(
          ext_modules=get_ext_modules(),
          cmdclass={"build_ext": finesse_build_ext},
