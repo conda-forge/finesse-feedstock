@@ -12,6 +12,8 @@ source:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
     - ignore-scipy-checks.patch
+    # This test requires the git repo to be present, commenting it out
+    - comment-environment-test.patch
     # # Networkx 3.3 dropped support for python 3.9, removing this makes the windows build fail
     - limit-networkx.patch  # [py<=39]
 

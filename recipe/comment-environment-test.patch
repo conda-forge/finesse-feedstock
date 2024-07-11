@@ -1,0 +1,13 @@
+diff --git a/scripts/generate_environment_files.py b/scripts/generate_environment_files.py
+index 7edc1c20..5f6b2ac3 100755
+--- a/scripts/generate_environment_files.py
++++ b/scripts/generate_environment_files.py
+@@ -156,7 +156,7 @@ def check_environment_files_modified():
+ 
+ def main():
+     # complain when the hook gets run and the yml files are already modified
+-    check_environment_files_modified()
++    # check_environment_files_modified()
+     with open(PYPROJECT_TOML, "rb") as f:
+         toml = tomllib.load(f)
+     for windows in (True, False):
