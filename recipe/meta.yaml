@@ -78,6 +78,7 @@ test:
   requires:
     - pytest
     - pytest-benchmark
+    - pytest-xdist
     - faker
     - hypothesis
     - docutils
