@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a26" %}
+{% set version = "3.0a27" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: 44319c3e2ce4846421384efb857c2ff406a7217cebc0ac039dbd4c5a4645437e
+  sha256: a9ee3bb2a0366f2c9db0be2805c0db08af8da708bc36db55480c44121b88fe4e
   patches:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
@@ -78,6 +78,7 @@ test:
   requires:
     - pytest
     - pytest-benchmark
+    - pytest-xdist
     - faker
     - hypothesis
     - docutils
