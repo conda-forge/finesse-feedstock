@@ -111,7 +111,7 @@ test:
 about:
   home: https://finesse.ifosim.org/
   dev_url: https://gitlab.com/ifosim/finesse/finesse3
-  doc_url: https://finesse.ifosim.org/docs/latest/index.html
+  doc_url: https://finesse.ifosim.org/docs/
   license: GPL-3.0-or-later
   license_file: LICENSE.md
   summary: A simulation tool for modelling laser interferometers
