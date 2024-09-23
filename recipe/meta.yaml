@@ -109,9 +109,9 @@ test:
     - python -m pytest tests --import-mode=importlib --benchmark-skip
 
 about:
-  home: https://www.gwoptics.org/finesse
-  dev_url: https://git.ligo.org/finesse/finesse3.git
-  doc_url: https://finesse.docs.ligo.org/finesse3/
+  home: https://finesse.ifosim.org/
+  dev_url: https://gitlab.com/ifosim/finesse/finesse3
+  doc_url: https://finesse.ifosim.org/docs/latest/index.html
   license: GPL-3.0-or-later
   license_file: LICENSE.md
   summary: A simulation tool for modelling laser interferometers
