@@ -3,15 +3,15 @@ About finesse-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/finesse-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.gwoptics.org/finesse
+Home: [https://www.gwoptics.org/finesse](https://finesse.ifosim.org/)
 
 Package license: GPL-3.0-or-later
 
 Summary: A simulation tool for modelling laser interferometers
 
-Development: https://git.ligo.org/finesse/finesse3.git
+Development: [https://git.ligo.org/finesse/finesse3.git](https://gitlab.com/ifosim/finesse/finesse3)
 
-Documentation: https://finesse.docs.ligo.org/finesse3/
+Documentation: [https://finesse.docs.ligo.org/finesse3/](https://finesse.ifosim.org/docs/latest/index.html)
 
 Finesse 3 is a Python based interferometer simulation software.
 
