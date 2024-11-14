@@ -16,6 +16,7 @@ source:
     - comment-environment-test.patch
     # # Networkx 3.3 dropped support for python 3.9, removing this makes the windows build fail
     - limit-networkx.patch  # [py<=39]
+    - limit-matplotlib.patch  # [py<=39]
 
 build:
   number: 0
