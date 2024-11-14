@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a28" %}
+{% set version = "3.0a29" %}
 
 package:
   name: {{ name|lower }}
