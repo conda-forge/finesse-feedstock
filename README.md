@@ -11,7 +11,7 @@ Summary: A simulation tool for modelling laser interferometers
 
 Development: https://gitlab.com/ifosim/finesse/finesse3
 
-Documentation: https://finesse.ifosim.org/docs/latest/index.html
+Documentation: https://finesse.ifosim.org/docs/
 
 Finesse 3 is a Python based interferometer simulation software.
 
