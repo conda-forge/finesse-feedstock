@@ -19,7 +19,8 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<39]
+  skip: true  # [not win and py<39]
+  skip: true  # [win and py<310]
   entry_points:
     - kat3 = finesse.__main__:cli
 
