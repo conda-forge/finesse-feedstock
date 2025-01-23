@@ -43,8 +43,8 @@ requirements:
     - python
     - scipy >=1.4
     # https://gitlab.com/ifosim/finesse/finesse3/-/issues/693
-    - setuptools <=75.6.0 # [osx]
-    - setuptools <=75.6.0 # [not osx]
+    - setuptools <=75.6.0  # [osx]
+    - setuptools <=75.6.0  # [not osx]
     - setuptools-scm
     - tqdm
     - wheel
