@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a31" %}
+{% set version = "3.0a32" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: 1c685b33aa9420ae4ea115a87667c65daf8fc4d180c5fadea7a9eaea209b3eff
+  sha256: fcb7ba99091cf61aab082f21319abab3b6c3163af409e2a2a1d02e4348ed2369
   patches:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
     - ignore-scipy-checks.patch
     # This test requires the git repo to be present, commenting it out
     - comment-environment-test.patch
-    # # Networkx 3.3 dropped support for python 3.9, removing this makes the windows build fail
-    - limit-networkx.patch  # [py<=39]
 
 build:
   number: 0
@@ -43,8 +41,7 @@ requirements:
     - python
     - scipy >=1.4
     # https://gitlab.com/ifosim/finesse/finesse3/-/issues/693
-    - setuptools <=75.6.0  # [osx]
-    - setuptools <=75.6.0  # [not osx]
+    - setuptools <=75.6.0
     - setuptools-scm
     - tqdm
     - wheel
@@ -54,9 +51,7 @@ requirements:
     - cython >=0.29.36
     - click >=7.1
     - click-default-group >=1.2.2
-    - control >0.9  # [not win]
-    - control >0.9  # [win and py>310]
-    - control <0.10.0  # [win and py<=310]
+    - control >0.9
     - deprecated >=1.2
     - h5py >=3.0
     - matplotlib-base >=3.5  # [not win]
@@ -65,7 +60,6 @@ requirements:
     - matplotlib-base >=3.5,<3.9  # [win]
     - more-itertools >=8.7
     - networkx >=2.4  # [py>39]
-    - networkx >=2.4,<3.3  # [py<=39] networkx 3.3 doesn't support 3.9 anymore
     - pyspellchecker >=0.6
     - python
     - scipy >=1.4
@@ -73,6 +67,8 @@ requirements:
     - sympy >=1.6
     - tqdm
     - quantiphy
+    - dill
+    - pathos
 #    - blockdiag >=3.0  # [py<311] this filter should be removed when https://github.com/conda-forge/funcparserlib-feedstock/pull/13 has been resolved
 #    - pillow <10.0 # blockdiag issues: site-packages/blockdiag/imagedraw/png.py:282: DeprecationWarning: getsize is deprecated and will be removed in Pillow 10 (2023-07-01). Use getbbox or getlength instead.
 
