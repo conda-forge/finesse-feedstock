@@ -16,7 +16,7 @@ source:
     - comment-environment-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -57,7 +57,6 @@ requirements:
     - matplotlib-base >=3.5  # [not win]
     - numpy >=1.22
     # numpy version issues
-    - matplotlib-base >=3.5,<3.9  # [win]
     - more-itertools >=8.7
     - networkx >=2.4  # [py>39]
     - pyspellchecker >=0.6
