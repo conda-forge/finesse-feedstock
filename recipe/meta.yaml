@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0a32" %}
+{% set version = "3.0a33" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: fcb7ba99091cf61aab082f21319abab3b6c3163af409e2a2a1d02e4348ed2369
+  sha256: f0aa3755a2e72ff3f2a424e4cf3a5c15fb4164a2aff3ce9dbdd90d8787ab89fd
   patches:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
@@ -16,7 +16,7 @@ source:
     - comment-environment-test.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<310]
   entry_points:
     - kat3 = finesse.__main__:cli
