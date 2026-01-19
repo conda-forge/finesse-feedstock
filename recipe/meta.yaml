@@ -82,7 +82,7 @@ test:
     - black
     - autoflake
     - isort
-    - jupyter-sphinx >= 0.4
+    - jupyter-sphinx >=0.4
     - pyyaml
     - pip
     - psutil
