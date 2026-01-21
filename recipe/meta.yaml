@@ -33,12 +33,14 @@ requirements:
     - cython >=0.29.36                    # [build_platform != target_platform]
     - numpy >=2                             # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
+    - python-gil
   host:
     - cython >=0.29.36
     - libpython  # [win]
     - numpy >=2
     - pip
     - python
+    - python-gil
     - scipy >=1.4
     # https://gitlab.com/ifosim/finesse/finesse3/-/issues/693
     - setuptools <=75.6.0
@@ -61,6 +63,7 @@ requirements:
     - networkx >=2.4
     - pyspellchecker >=0.6
     - python
+    - python-gil
     - scipy >=1.4
     - sly >=0.4
     - sympy >=1.6
