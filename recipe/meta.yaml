@@ -16,7 +16,7 @@ source:
     - comment-environment-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<311]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -33,6 +33,7 @@ requirements:
     - cython >=0.29.36                    # [build_platform != target_platform]
     - numpy >=2                             # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
+    - matplotlib-base >=3.10
   host:
     - cython >=0.29.36
     - libpython  # [win]
@@ -47,6 +48,7 @@ requirements:
     - wheel
     - suitesparse
     - quantiphy
+    - matplotlib-base >=3.10
   run:
     - cython >=0.29.36
     - click >=7.1
@@ -54,11 +56,11 @@ requirements:
     - control >0.9
     - deprecated >=1.2
     - h5py >=3.0
-    - matplotlib-base >=3.5  # [not win]
+    - matplotlib-base >=3.10
     - numpy >=1.22
     # numpy version issues
     - more-itertools >=8.7
-    - networkx >=2.4  # [py>39]
+    - networkx >=2.4
     - pyspellchecker >=0.6
     - python
     - scipy >=1.4
@@ -68,9 +70,6 @@ requirements:
     - quantiphy
     - dill
     - pathos
-#    - blockdiag >=3.0  # [py<311] this filter should be removed when https://github.com/conda-forge/funcparserlib-feedstock/pull/13 has been resolved
-#    - pillow <10.0 # blockdiag issues: site-packages/blockdiag/imagedraw/png.py:282: DeprecationWarning: getsize is deprecated and will be removed in Pillow 10 (2023-07-01). Use getbbox or getlength instead.
-
 test:
   requires:
     - pytest
@@ -82,7 +81,7 @@ test:
     - black
     - autoflake
     - isort
-    - jupyter-sphinx >= 0.4
+    - jupyter-sphinx >=0.4
     - pyyaml
     - pip
     - psutil
