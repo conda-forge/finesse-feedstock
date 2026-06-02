@@ -1,17 +1,17 @@
-diff --git a/setup.py b/setup.py
-index 84ced4cb..aee9f2b5 100644
---- a/setup.py
-+++ b/setup.py
-@@ -517,9 +517,9 @@ def check_pyx_files(pyx_files: KeysView[Path]) -> None:
- 
+diff --git i/setup.py w/setup.py
+index 45c9036c7..65ba55de5 100644
+--- i/setup.py
++++ w/setup.py
+@@ -525,9 +525,9 @@ def write_hash(no_errors: bool = True):
  
  if __name__ == "__main__":
--    scipy_cython_version_check()
--    scipy_numpy_2_check()
--    numpy_1_check()
-+    # scipy_cython_version_check()
-+    # scipy_numpy_2_check()
-+    # numpy_1_check()
-     setup(
-         ext_modules=get_ext_modules(),
-         cmdclass={"build_ext": finesse_build_ext},
+     try:
+-        scipy_cython_version_check()
+-        scipy_numpy_2_check()
+-        numpy_1_check()
++        #scipy_cython_version_check()
++        #scipy_numpy_2_check()
++        #numpy_1_check()
+         setup(
+             ext_modules=get_ext_modules(),
+             cmdclass={"build_ext": finesse_build_ext},
