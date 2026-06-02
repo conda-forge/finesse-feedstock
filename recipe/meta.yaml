@@ -1,5 +1,5 @@
 {% set name = "finesse" %}
-{% set version = "3.0b3" %}
+{% set version = "3.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
-  sha256: 149d9ee1d33c3086c743c12304e0073bcfc5071718ab6d9aec997fa70391e226
+  sha256: a427406dc21022e9a96510e0129f7c6594993ef8b4b849b2b5fb252405c23c40
   patches:
     # The scipy checks are causing issues when importing scipy during the installation
     # procedure
