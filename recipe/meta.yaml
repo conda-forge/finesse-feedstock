@@ -36,7 +36,7 @@ requirements:
     - matplotlib-base >=3.10
   host:
     - cython >=0.29.36
-    - libpython  # [win]
+    - distutils-activate-mingw  # [win]
     - numpy >=2
     - pip
     - python
