@@ -16,7 +16,7 @@ source:
     - comment-environment-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<311]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -36,7 +36,7 @@ requirements:
     - matplotlib-base >=3.10
   host:
     - cython >=0.29.36
-    - libpython  # [win]
+    - distutils-activate-mingw  # [win]
     - numpy >=2
     - pip
     - python
