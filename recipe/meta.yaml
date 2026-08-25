@@ -35,7 +35,7 @@ requirements:
     - python                              # [build_platform != target_platform]
     - matplotlib-base >=3.10
   host:
-    - cython >=0.29.36
+    - cython <3.2.6
     - distutils-activate-mingw  # [win]
     - numpy >=2
     - pip
@@ -50,7 +50,7 @@ requirements:
     - quantiphy
     - matplotlib-base >=3.10
   run:
-    - cython >=0.29.36
+    - cython <3.2.6
     - click >=7.1
     - click-default-group >=1.2.2
     - control >0.9
