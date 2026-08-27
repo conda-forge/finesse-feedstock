@@ -16,7 +16,7 @@ source:
     - comment-environment-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<311]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -67,6 +67,7 @@ requirements:
     - quantiphy
     - dill
     - pathos
+    - colorama
 test:
   requires:
     - pytest
