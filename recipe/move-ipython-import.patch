@@ -1,5 +1,5 @@
 diff --git i/src/finesse/utilities/text.py w/src/finesse/utilities/text.py
-index aa574757d..da61bcf0f 100644
+index aa574757d..e8c2809b3 100644
 --- i/src/finesse/utilities/text.py
 +++ w/src/finesse/utilities/text.py
 @@ -5,7 +5,6 @@ from collections.abc import Iterable
@@ -14,7 +14,7 @@ index aa574757d..da61bcf0f 100644
          Clear the output before writing new lines. Defaults to `True`.
      """
      if is_jupyter():
-+    	   from IPython.display import clear_output
++        from IPython.display import clear_output
          # Jupyter: Use clear_output
          if clear:
              clear_output(wait=True)
