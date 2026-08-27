@@ -42,7 +42,7 @@ requirements:
     - python
     - scipy >=1.4
     # https://gitlab.com/ifosim/finesse/finesse3/-/issues/693
-    - setuptools <=75.6.0
+    - setuptools
     - setuptools-scm
     - tqdm
     - wheel
