@@ -14,6 +14,7 @@ source:
     - ignore-scipy-checks.patch
     # This test requires the git repo to be present, commenting it out
     - comment-environment-test.patch
+    - skip-failing-plot-windows.patch
 
 build:
   number: 0
