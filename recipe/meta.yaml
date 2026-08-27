@@ -16,6 +16,7 @@ source:
     - comment-environment-test.patch
     # dont import ipython at import time
     - move-ipython-import.patch
+    - skip-failing-plot-windows.patch
 
 build:
   number: 1
