@@ -64,6 +64,7 @@ requirements:
     - numpy >=1.20
     - pathos
     - pyspellchecker >=0.6
+    - python
     - quantiphy >=2.15
     - scipy >=1.4  #NB: for cython3 SciPy>=1.11.2, see !159#note_1619762810. For numpy 2 SciPy>=1.13.0
     - sly >=0.4
