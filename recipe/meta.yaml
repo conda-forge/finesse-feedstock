@@ -84,7 +84,6 @@ test:
     - psutil
     - pytest
     - pytest-benchmark !=5.3.0
-    - pytest-random-order
     - pytest-xdist
     - pyyaml
   source_files:
