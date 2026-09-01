@@ -52,40 +52,40 @@ requirements:
     - quantiphy
     - matplotlib-base >=3.10
   run:
-    - click >=7.1
-    - click-default-group >=1.2.2
-    - control >0.9
-    - deprecated >=1.2
-    - h5py >=3.0
-    - matplotlib-base >=3.10
-    - numpy >=1.22
-    # numpy version issues
-    - networkx >=2.4
-    - pyspellchecker >=0.6
-    - python
-    - scipy >=1.4
-    - sly >=0.4
-    - sympy >=1.6
-    - tqdm
-    - quantiphy
+    - click >= 7.1
+    - click-default-group >= 1.2.2
+    - colorama >= 0.4
+    - control >= 0.9
+    - deprecated >= 1.2
     - dill
+    - h5py >= 3.0  # for numpy 2 >= 3.11"
+    - matplotlib >= 3.5
+    - networkx >= 2.4
+    - numpy >= 1.20
     - pathos
-    - colorama
+    - pyspellchecker >= 0.6
+    - quantiphy >= 2.15
+    - scipy >= 1.4  #NB: for cython3 SciPy>=1.11.2, see !159#note_1619762810. For numpy 2 SciPy>=1.13.0
+    - sly >= 0.4
+    - sympy >= 1.6  # for numpy 2 >= 12.1
+    - tqdm >= 4.40
 test:
   requires:
-    - pytest
-    - pytest-benchmark !=5.3.0
-    - pytest-xdist
+    - autoflake
+    - black
+    - docutils
     - faker
     - hypothesis
-    - docutils
-    - black
-    - autoflake
     - isort
-    - jupyter-sphinx >=0.4
-    - pyyaml
-    - pip
+    - jupyter-sphinx >= 0.4
+    - nbconvert
+    - nbformat
     - psutil
+    - pytest
+    - pytest-benchmark !=5.3.0
+    - pytest-random-order
+    - pytest-xdist
+    - pyyaml
   source_files:
     - tests/
     - scripts/
