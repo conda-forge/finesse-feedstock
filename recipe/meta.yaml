@@ -19,7 +19,7 @@ source:
     - skip-failing-plot-windows.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<311]
   entry_points:
     - kat3 = finesse.__main__:cli
@@ -54,38 +54,39 @@ requirements:
   run:
     - click >=7.1
     - click-default-group >=1.2.2
-    - control >0.9
+    - colorama >=0.4
+    - control >=0.9
     - deprecated >=1.2
-    - h5py >=3.0
-    - matplotlib-base >=3.10
-    - numpy >=1.22
-    # numpy version issues
+    - dill
+    - h5py >=3.0  # for numpy 2 >= 3.11"
+    - matplotlib-base >=3.5  # https://conda-forge.org/docs/maintainer/knowledge_base/#matplotlib
     - networkx >=2.4
+    - numpy >=1.20
+    - pathos
     - pyspellchecker >=0.6
     - python
-    - scipy >=1.4
+    - quantiphy >=2.15
+    - scipy >=1.4  #NB: for cython3 SciPy>=1.11.2, see !159#note_1619762810. For numpy 2 SciPy>=1.13.0
     - sly >=0.4
-    - sympy >=1.6
-    - tqdm
-    - quantiphy
-    - dill
-    - pathos
-    - colorama
+    - sympy >=1.6  # for numpy 2 >= 12.1
+    - tqdm >=4.40
 test:
   requires:
+    - autoflake
+    - black
+    - docutils
+    - faker
+    - hypothesis
+    - isort
+    - jupyter-sphinx >=0.4
+    - nbconvert
+    - nbformat
+    - pip  # only required in feedstock because of pip check command below
+    - psutil
     - pytest
     - pytest-benchmark !=5.3.0
     - pytest-xdist
-    - faker
-    - hypothesis
-    - docutils
-    - black
-    - autoflake
-    - isort
-    - jupyter-sphinx >=0.4
     - pyyaml
-    - pip
-    - psutil
   source_files:
     - tests/
     - scripts/
