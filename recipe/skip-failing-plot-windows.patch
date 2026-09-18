@@ -1,0 +1,22 @@
+diff --git i/tests/functional/plotting/test_array_solution_plot.py w/tests/functional/plotting/test_array_solution_plot.py
+index cf53e370f..e9f2ae782 100644
+--- i/tests/functional/plotting/test_array_solution_plot.py
++++ w/tests/functional/plotting/test_array_solution_plot.py
+@@ -15,8 +15,7 @@ import numpy as np
+ import pytest
+ from matplotlib.testing.decorators import check_figures_equal
+ 
+-import finesse.detectors as detectors
+-from finesse import Model
++from finesse import Model, detectors
+ from finesse.analysis.actions import X3axis, Xaxis
+ 
+ ### The below is taken from https://stackoverflow.com/a/51742499/
+@@ -192,6 +191,7 @@ def test_figure_dictionary_keys_single_detector(fp_cavity_model: Model):
+     assert set(fig_dict.keys()) == {detectors.CCD, "ccd1"}
+ 
+ 
++@pytest.mark.linux
+ def test_figure_dictionary_keys_multiple_detectors(fp_cavity_model: Model):
+     fp_cavity_model.add(detectors.CCD("ccd1", fp_cavity_model.L0.p1.o, 1, 1, 10))
+     fp_cavity_model.add(detectors.CCD("ccd2", fp_cavity_model.L0.p1.o, 1, 1, 10))
