@@ -51,23 +51,23 @@ requirements:
   run:
     - click >=7.1
     - click-default-group >=1.2.2
-    - control >0.9
+    - control >=0.9
     - deprecated >=1.2
     - h5py >=3.0
-    - matplotlib-base >=3.10
-    - numpy >=1.22
+    - matplotlib-base >=3.10.0
+    - numpy >=2.4.0
     # numpy version issues
     - networkx >=2.4
     - pyspellchecker >=0.6
     - python
-    - scipy >=1.4
+    - scipy >=1.17.0
     - sly >=0.4
     - sympy >=1.6
-    - tqdm
-    - quantiphy
+    - tqdm >= 4.40
+    - quantiphy >= 2.15
     - dill
     - pathos
-    - colorama
+    - colorama >=0.4
 test:
   requires:
     - pytest
@@ -83,6 +83,8 @@ test:
     - pyyaml
     - pip
     - psutil
+    - nbconvert
+    - nbformat
   source_files:
     - tests/
     - scripts/
