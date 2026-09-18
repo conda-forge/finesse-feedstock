@@ -41,7 +41,7 @@ requirements:
     - distutils-activate-mingw  # [win]
     - numpy >=2.4.0
     - pip
-    - python >=3.11
+    - python
     - scipy >=1.17.0
     - setuptools >=80
     - setuptools-scm >=10.0.0
@@ -60,7 +60,7 @@ requirements:
     - numpy >=2.4.0
     - networkx >=2.4
     - pyspellchecker >=0.6
-    - python >=3.11
+    - python
     - scipy >=1.17.0
     - sly >=0.4
     - sympy >=1.6
