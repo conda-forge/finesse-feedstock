@@ -19,7 +19,7 @@ source:
     - skip-failing-plot-windows.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py<311]
   entry_points:
     - kat3 = finesse.__main__:cli
