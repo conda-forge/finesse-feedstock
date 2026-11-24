@@ -9,13 +9,8 @@ source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/finesse-{{ version }}.tar.gz
   sha256: cad07b178254dcd9006e34f9e654c53719d0ce87a1f08ad4318935766c5ff969
   patches:
-    # The scipy checks are causing issues when importing scipy during the installation
-    # procedure
-    - ignore-scipy-checks.patch
     # This test requires the git repo to be present, commenting it out
     - comment-environment-test.patch
-    # dont import ipython at import time
-    - move-ipython-import.patch
     - skip-failing-plot-windows.patch
 
 build:
